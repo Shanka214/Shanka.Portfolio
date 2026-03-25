@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Sanka Liyanage | Software Engineering undergraduate | Full-stack web development, UI/UX design, system analysis." />
+  <title>Sanka Liyanage | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <nav class="navbar container" id="navbar">
+      <a class="logo" href="#home">Sanka Liyanage</a>
+      <ul class="nav-list" id="navList">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#flyers">Flyers</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">&#9776;</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="home-section">
+      <div class="home-bg"></div>
+      <div class="container home-grid">
+        <div class="hero-left">
+          <img class="profile-circle" src="https://i.postimg.cc/8zKVLndX/Whats-App-Image-2025-11-13-at-21-21-00.jpg" alt="Sanka Liyanage" />
+          <p class="home-subtitle">Software Engineering Undergraduate · Web Developer · UI/UX Designer</p>
+          <h1>Sanka Liyanage</h1>
+          <p class="tagline">“Building clean, functional, and scalable digital solutions.”</p>
+          <div class="home-cta">
+            <a class="btn primary-btn" href="#projects">View My Work</a>
+            <a class="btn outline-btn" href="https://drive.google.com/drive/folders/197hhvTXViMfDmUh7yfS3urEEG7OcNjfA?usp=drive_link" target="_blank" rel="noopener">Download CV</a>
+            <a class="btn ghost-btn" href="#contact">Contact Me</a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/shanka-liyanage-04a083312/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/Shanka214" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:shankaliyanage214@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container section-card">
+      <h2>About Me</h2>
+      <p class="about-text">
+        I am a motivated Software Engineering undergraduate currently completing the final stage of my BEng (Hons) Software Engineering degree at London Metropolitan University.
+        I specialize in web application development, UI/UX design, and data-driven digital solutions.
+        I enjoy solving real-world problems and learning new technologies to create modern, practical, and user-friendly applications.
+      </p>
+      <h3>Education</h3>
+      <ul class="education-list">
+        <li>BEng (Hons) Software Engineering – London Metropolitan University (Ongoing, final 2 months)</li>
+        <li>BTEC HND in Software Engineering – ESOFT Metro Campus (2023–2024)</li>
+        <li>Diploma in IT (Pearson Assured) – ESOFT Metro Campus (2021–2022)</li>
+        <li>G.C.E. O/L – Dharmaraja College, Kandy</li>
+        <li>Speech & Drama / Written English Certification (UK)</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="container section-card">
+      <h2>Skills</h2>
+      <div class="skill-group">
+        <h3>Programming</h3>
+        <div class="chips">Python · Java · C# · PHP</div>
+      </div>
+      <div class="skill-group">
+        <h3>Web Development</h3>
+        <div class="chips">HTML · CSS · JavaScript · Bootstrap · WordPress</div>
+      </div>
+      <div class="skill-group">
+        <h3>Tools & Databases</h3>
+        <div class="chips">MS SQL · GitHub · Figma</div>
+      </div>
+      <div class="skill-group">
+        <h3>Data & Visualization</h3>
+        <div class="chips">Power BI</div>
+      </div>
+      <div class="skill-group">
+        <h3>Soft Skills</h3>
+        <div class="chips">Problem-solving · Communication · Leadership · Time Management</div>
+      </div>
+    </section>
+
+    <section id="projects" class="container section-card">
+      <h2>Projects</h2>
+      <div class="card-grid">
+        <!-- 1 -->
+        <article class="project-card">
+          <img src="https://i.postimg.cc/MTTHyrFg/Screenshot-2025-10-11-021043.png" alt="StarEvents Online Event Ticketing" />
+          <h3>StarEvents Online Event Ticketing</h3>
+          <p>ASP.NET MVC platform with event management, ticket sales, QR e-tickets, and admin monitoring.</p>
+          <button class="btn outline-btn project-btn" data-project="star">View Details</button>
+        </article>
+
+        <!-- 2 -->
+        <article class="project-card">
+          <img src="https://i.postimg.cc/3NBP9HxX/image.png" alt="Nestlings Childcare Marketplace" />
+          <h3>Nestlings Childcare Marketplace</h3>
+          <p>Final Year Project childcare booking site with provider verification, parent dashboard, AI chatbot.</p>
+          <button class="btn outline-btn project-btn" data-project="nestlings">View Details</button>
+        </article>
+
+        <!-- 3 -->
+        <article class="project-card">
+          <img src="https://i.postimg.cc/Y2YD1FnH/image.png" alt="Echo Hotel Reservation System" />
+          <h3>Echo Hotel Reservation System</h3>
+          <p>PHP/MySQL booking engine with branch admin controls and pricing management.</p>
+          <button class="btn outline-btn project-btn" data-project="echo">View Details</button>
+        </article>
+
+        <!-- 4 -->
+        <article class="project-card">
+          <img src="https://i.postimg.cc/9Fq94PJ7/image.png" alt="E-Video Cloud UI" />
+          <h3>E-Video Cloud UI (Figma)</h3>
+          <p>UI/UX design for modern streaming platform with rent/own and library management.</p>
+          <button class="btn outline-btn project-btn" data-project="evideo">View Details</button>
+        </article>
+
+        <!-- 5 -->
+        <article class="project-card">
+          <img src="https://i.postimg.cc/VvwjmJPp/image.png" alt="Malcolm Photography Website" />
+          <h3>Malcolm Photography Website</h3>
+          <p>Responsive multipage portfolio with gallery, contact form, SEO, and admin backend.</p>
+          <button class="btn outline-btn project-btn" data-project="malcolm">View Details</button>
+        </article>
+
+        <!-- 6 -->
+        <article class="project-card">
+          <div class="icon-card">📁</div>
+          <h3>Grifindo Toys Payroll System</h3>
+          <p>C#, SQL Server payroll tool with report generator, allowances, and overtime workflow.</p>
+          <button class="btn outline-btn project-btn" data-project="grifindo">View Details</button>
+        </article>
+
+        <!-- 7 -->
+        <article class="project-card">
+          <img src="https://i.postimg.cc/KzMdCHm0/image.png" alt="Alliance Health LAN Design" />
+          <h3>Alliance Health LAN Network Design</h3>
+          <p>Cisco Packet Tracer LAN architecture with VLANs, routing, DHCP, DNS, security zones.</p>
+          <button class="btn outline-btn project-btn" data-project="alliance">View Details</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="flyers" class="container section-card">
+      <h2>Flyers</h2>
+      <p>Promotional, social announcements, product highlights, and informational flyer designs.</p>
+      <div class="flyer-grid">
+        <a class="flyer-item" href="https://i.postimg.cc/placeholder1.png" data-lightbox>
+          <img src="https://i.postimg.cc/placeholder1.png" alt="Flyer 1" />
+        </a>
+        <a class="flyer-item" href="https://i.postimg.cc/placeholder2.png" data-lightbox>
+          <img src="https://i.postimg.cc/placeholder2.png" alt="Flyer 2" />
+        </a>
+        <a class="flyer-item" href="https://i.postimg.cc/placeholder3.png" data-lightbox>
+          <img src="https://i.postimg.cc/placeholder3.png" alt="Flyer 3" />
+        </a>
+        <a class="flyer-item" href="https://i.postimg.cc/placeholder4.png" data-lightbox>
+          <img src="https://i.postimg.cc/placeholder4.png" alt="Flyer 4" />
+        </a>
+      </div>
+      <a class="btn primary-btn" href="https://drive.google.com/drive/folders/17l54Bdf0Me_5jBTtu0izwWSbB_PDioKa?usp=drive_link" target="_blank" rel="noopener">View All Flyers</a>
+    </section>
+
+    <section id="services" class="container section-card">
+      <h2>Services</h2>
+      <div class="services-grid">
+        <article class="service-card"><h3>Web Development</h3><p>Responsive, high-performance web applications and systems.</p></article>
+        <article class="service-card"><h3>UI/UX Design</h3><p>Wireframes, prototypes, user-centered experiences.</p></article>
+        <article class="service-card"><h3>Data Visualization</h3><p>Power BI dashboard design and analytical reporting.</p></article>
+        <article class="service-card"><h3>System Analysis</h3><p>Architecture diagrams, feasibility, documentation and planning.</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="container section-card">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div>
+          <p>📧 <strong>Email:</strong> shankaliyanage214@gmail.com</p>
+          <p>📞 <strong>Phone:</strong> 0770151254</p>
+          <p>🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shanka-liyanage-04a083312/" target="_blank" rel="noopener">linkedin.com/in/shanka-liyanage-04a083312/</a></p>
+          <p>💻 <strong>GitHub:</strong> <a href="https://github.com/Shanka214" target="_blank" rel="noopener">github.com/Shanka214</a></p>
+        </div>
+        <form class="contact-form" action="#" method="POST">
+          <label><input type="text" placeholder="Name" required /></label>
+          <label><input type="email" placeholder="Email" required /></label>
+          <label><textarea rows="5" placeholder="Message" required></textarea></label>
+          <button class="btn primary-btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Sanka Liyanage — All Rights Reserved</p>
+  </footer>
+
+  <div id="projectModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-modal" id="closeModal">&times;</button>
+      <div id="projectDetail"></div>
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox hidden">
+    <button id="lightboxClose" class="lightbox-close">&times;</button>
+    <img id="lightboxImage" alt="Flyer preview" />
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
