@@ -4,7 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sanka Liyanage | Digital Marketing & Content</title>
-<meta name="description" content="Sanka Liyanage: social media content, campaign support and visual design. Based in Dubai.">
+<meta name="description" content="Sanka Liyanage is a Dubai-based digital marketer and content creator with a software engineering background. Explore campaign work, creative projects and experience.">
+<meta name="theme-color" content="#f7f8f5">
+<meta property="og:title" content="Sanka Liyanage | Digital Marketing & Content">
+<meta property="og:description" content="Digital marketing, social content and visual storytelling, informed by a software engineering background.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -128,6 +131,7 @@ footer{padding:22px 0;font-size:.88rem;color:var(--muted);text-align:center}
   .reveal{opacity:1;transform:none}
 }
 </style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -135,7 +139,7 @@ footer{padding:22px 0;font-size:.88rem;color:var(--muted);text-align:center}
   <div class="wrap">
     <nav aria-label="Main">
       <a class="logo" href="#top">Sanka Liyanage</a>
-      <ul>
+      <ul id="navList">
         <li><a href="#work">Work</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -149,16 +153,18 @@ footer{padding:22px 0;font-size:.88rem;color:var(--muted);text-align:center}
 <main id="top">
 <section class="hero">
   <div class="wrap">
-    <div>
-      <h1>Content that gets a brand noticed.</h1>
-      <p class="lead">I'm a digital marketing and content creator with a software engineering degree. I create social posts, reels and campaign visuals, and I use data to see what works.</p>
+    <div class="hero-copy">
+      <p class="eyebrow">Digital marketing · Content · Creative technology</p>
+      <h1>Sanka Liyanage</h1>
+      <p class="hero-role">Digital marketer and content creator</p>
+      <p class="lead">I turn ideas into clear, engaging digital content. With a first-class degree in software engineering, I bring a creative eye and a considered, data-aware approach to every campaign.</p>
       <div class="badges">
         <span class="badge">Based in Dubai</span>
-        <span class="badge">Available immediately</span>
+        <span class="badge">Open to opportunities</span>
       </div>
       <div class="btns">
-        <a class="btn primary" href="#work">See my work</a>
-        <a class="btn ghost" href="#contact">Get in touch</a>
+        <a class="btn primary" href="#work">Explore my work <span aria-hidden="true">↗</span></a>
+        <a class="btn ghost" href="#contact">Start a conversation</a>
       </div>
     </div>
     <div class="photo"><span aria-hidden="true">SL</span><img src="images/profile.jpeg" alt="Sanka Liyanage" onerror="this.remove()"></div>
@@ -167,35 +173,39 @@ footer{padding:22px 0;font-size:.88rem;color:var(--muted);text-align:center}
 
 <section id="work">
   <div class="wrap">
-    <h2>Selected work</h2>
+    <p class="eyebrow">A selection of recent work</p>
+    <h2>Ideas made visible.</h2>
+    <p class="section-intro">Social content, campaign visuals and brand communication created to make information useful, clear and memorable.</p>
     <div class="wcard wmain">
       <div>
-        <h3>All my content in one folder</h3>
-        <p>Social media posts, reels, flyers and campaign visuals.</p>
+        <h3>Content & campaign portfolio</h3>
+        <p>A growing collection of social posts, reels, event materials and campaign visuals. Open the portfolio to browse the work.</p>
       </div>
       <a class="btn primary" href="https://drive.google.com/drive/folders/1mXhD0Tsjy6kbN8fsBhjZNHs6CW0aFbVB?usp=sharing">View my work</a>
     </div>
     <div class="live">
-      <p>See my latest content live on ImpactEra's LinkedIn page.</p>
-      <a class="btn primary" href="https://www.linkedin.com/company/impacteraa/posts/?feedView=all" target="_blank" rel="noopener">View ImpactEra posts</a>
+      <div><p class="eyebrow">In the wild</p><p>See published updates and campaign content on ImpactEra's LinkedIn page.</p></div>
+      <a class="btn primary" href="https://www.linkedin.com/company/impacteraa/posts/?feedView=all" target="_blank" rel="noopener">Visit LinkedIn <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
 
 <section id="experience" style="background:var(--wash)">
   <div class="wrap">
-    <h2>Experience</h2>
+    <p class="eyebrow">How I work</p>
+    <h2>Experience with purpose.</h2>
+    <p class="section-intro">I work across content, campaign support and partner communication, bringing structure and creativity to the same brief.</p>
     <div class="job">
       <div class="when">Apr 2026 to Sep 2026<br>Dubai, UAE</div>
       <div>
         <h3>Business Development Associate & Content Creator</h3>
         <p class="org">ImpactEra (UAE)</p>
         <ul>
-          <li>Supported digital marketing campaigns and partner engagement to strengthen brand visibility online.</li>
-          <li>Created social media content, promotional visuals and marketing materials for campaigns and events.</li>
-          <li>Developed content strategies matched to campaign goals, target audiences and brand requirements.</li>
-          <li>Worked with internal teams and external partners to coordinate content and campaign activity.</li>
-          <li>Designed visuals for professional events, training programmes and technology-focused campaigns.</li>
+          <li>Supported digital marketing campaigns and partner engagement to strengthen the brand's online presence.</li>
+          <li>Created social content, promotional visuals and marketing materials for campaigns and events.</li>
+          <li>Shaped content plans around campaign goals, audience needs and brand requirements.</li>
+          <li>Coordinated with internal teams and external partners to keep campaign activity moving.</li>
+          <li>Designed communication materials for professional events, training programmes and technology campaigns.</li>
         </ul>
       </div>
     </div>
@@ -205,10 +215,10 @@ footer{padding:22px 0;font-size:.88rem;color:var(--muted);text-align:center}
         <h3>Digital Content Creator Intern</h3>
         <p class="org">ISURU Creations (Pvt) Ltd</p>
         <ul>
-          <li>Managed the company's social media platforms.</li>
-          <li>Created posts, reels and other digital content.</li>
-          <li>Kept the company's online presence and branding consistent.</li>
-          <li>Supported content planning and audience engagement.</li>
+          <li>Managed social media channels and supported a consistent brand presence.</li>
+          <li>Produced platform-ready posts, reels and short-form digital content.</li>
+          <li>Helped plan publishing and maintain a consistent visual voice.</li>
+          <li>Supported audience engagement and day-to-day content activity.</li>
         </ul>
       </div>
     </div>
@@ -217,7 +227,9 @@ footer{padding:22px 0;font-size:.88rem;color:var(--muted);text-align:center}
 
 <section id="skills">
   <div class="wrap">
-    <h2>Skills and tools</h2>
+    <p class="eyebrow">My toolkit</p>
+    <h2>Creative thinking, practical tools.</h2>
+    <p class="section-intro">A mix of marketing know-how, hands-on production and technical fluency helps me move comfortably from idea to execution.</p>
     <div class="skills">
       <div><h3>Marketing</h3><div class="chips"><span>Social media management</span><span>Social media strategy</span><span>Campaign coordination</span><span>SEO basics</span><span>Email marketing (Brevo)</span><span>Community engagement</span></div></div>
       <div><h3>Content and design</h3><div class="chips"><span>Canva</span><span>Figma</span><span>CapCut</span><span>Copywriting</span><span>Brand communication</span><span>Visual content</span></div></div>
@@ -229,15 +241,17 @@ footer{padding:22px 0;font-size:.88rem;color:var(--muted);text-align:center}
 
 <section id="projects" style="background:var(--wash)">
   <div class="wrap">
-    <h2>Projects</h2>
+    <p class="eyebrow">Selected academic & personal projects</p>
+    <h2>Curiosity beyond the campaign.</h2>
+    <p class="section-intro">My engineering background means I enjoy solving the systems behind an experience as much as shaping how it looks and feels.</p>
     <div class="pgrid">
-      <article class="pcard"><div class="info"><h3>E-Video Cloud UI (Figma)</h3><p>UI/UX design for a modern streaming platform with rent/own and library management.</p></div></article>
-      <article class="pcard"><div class="info"><h3>Malcolm Photography Website</h3><p>Responsive multipage portfolio with gallery, contact form, SEO and admin backend.</p></div></article>
-      <article class="pcard"><div class="info"><h3>Alliance Health LAN Network Design</h3><p>Cisco Packet Tracer LAN with VLANs, routing, DHCP, DNS and security zones.</p></div></article>
-      <article class="pcard"><div class="info"><h3>Soft Skills Workshop</h3><p>Planned and ran a training session for 50+ students at ESOFT Metro Campus.</p></div></article>
-      <article class="pcard"><div class="info"><h3>StarEvents Ticketing System</h3><p>Event booking platform with secure payments, QR tickets and analytics.</p></div></article>
-      <article class="pcard"><div class="info"><h3>Nestlings Marketplace</h3><p>Final-year childcare booking platform with dashboards, reviews and an AI chatbot.</p></div></article>
-      <article class="pcard"><div class="info"><h3>Big Data Research</h3><p>Operational efficiency analysis for SITREK Group.</p></div></article>
+      <article class="pcard"><div class="info"><span class="project-type">UI / UX · FIGMA</span><h3>E-Video Cloud</h3><p>A streaming and rental interface exploring discovery, rent-or-own choices and personal library management.</p></div></article>
+      <article class="pcard"><div class="info"><span class="project-type">WEB · PHP · MYSQL</span><h3>Malcolm Photography</h3><p>A responsive photographer portfolio with gallery browsing, contact flow, search optimization and an admin backend.</p></div></article>
+      <article class="pcard"><div class="info"><span class="project-type">NETWORK · PACKET TRACER</span><h3>Alliance Health LAN</h3><p>An enterprise network design with VLAN segmentation, routing, DHCP, DNS and security zones.</p></div></article>
+      <article class="pcard"><div class="info"><span class="project-type">EVENT · FACILITATION</span><h3>Soft Skills Workshop</h3><p>Planned and facilitated a practical workshop for more than 50 students at ESOFT Metro Campus.</p></div></article>
+      <article class="pcard"><div class="info"><span class="project-type">WEB APP · C# · SQL</span><h3>StarEvents Ticketing</h3><p>An event booking concept with organizer tools, ticket purchasing, QR-coded e-tickets and sales reporting.</p></div></article>
+      <article class="pcard"><div class="info"><span class="project-type">FINAL YEAR · PHP · MYSQL</span><h3>Nestlings Marketplace</h3><p>A childcare booking platform concept connecting families and providers through scheduling, profiles and reviews.</p></div></article>
+      <article class="pcard"><div class="info"><span class="project-type">RESEARCH · DATA ANALYSIS</span><h3>Big Data Research</h3><p>Research into the use of big data for operational efficiency, focused on SITREK Group.</p></div></article>
     </div>
   </div>
 </section>
@@ -247,15 +261,15 @@ footer{padding:22px 0;font-size:.88rem;color:var(--muted);text-align:center}
     <div>
       <h2>Education</h2>
       <ul class="list">
-        <li><b>BEng in Software Engineering</b><span>London Metropolitan University. First class.</span></li>
-        <li><b>Pearson BTEC HND in Software Engineering</b><span>13 Distinctions and 2 Merits.</span></li>
+        <li><b>BEng in Software Engineering</b><span>London Metropolitan University · First-class honours</span></li>
+        <li><b>Pearson BTEC HND in Software Engineering</b><span>13 Distinctions and 2 Merits</span></li>
         <li><b>Pearson Assured Diploma in IT</b><span>ESOFT Metro Campus. Overall Distinction.</span></li>
         <li><b>Speech & Drama and Written English (UK)</b><span>Honours, Society of Teachers of Speech and Drama.</span></li>
       </ul>
     </div>
     <div class="grad">
-      <h2>Graduation</h2>
-      <img src="images/graduation.jpg" alt="Sanka Liyanage at graduation" onerror="this.remove()">
+      <h2>A milestone worth remembering.</h2>
+      <div class="grad-note"><span>FIRST-CLASS HONOURS</span><strong>BEng Software Engineering</strong><p>London Metropolitan University</p></div>
       <a class="wlink" href="https://drive.google.com/drive/folders/1BD_4m0cqZxn7JOGkI81FeZ1eP2nTuW1w?usp=sharing">View more graduation photos</a>
     </div>
   </div>
@@ -263,8 +277,9 @@ footer{padding:22px 0;font-size:.88rem;color:var(--muted);text-align:center}
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <h2>Let's work together</h2>
-    <p>I'm in Dubai and ready to start now. Send me a message or connect on LinkedIn.</p>
+    <p class="eyebrow">Have a project in mind?</p>
+    <h2>Let's make something meaningful.</h2>
+    <p>I'm based in Dubai and open to digital marketing and content opportunities. Tell me what you're building, and let's see how I can help.</p>
     <div class="links">
       <a class="btn primary" href="mailto:shankaliyanage214@gmail.com">shankaliyanage214@gmail.com</a>
       <a class="btn" href="https://wa.me/971541608232" target="_blank" rel="noopener">WhatsApp</a>
@@ -276,36 +291,7 @@ footer{padding:22px 0;font-size:.88rem;color:var(--muted);text-align:center}
 </section>
 </main>
 
-<footer>&copy; 2026 Sanka Liyanage</footer>
-
-<script>
-/* Paste your cloud links between the quotes. Empty ones show "Link coming soon". */
-const LINKS = {
-  work: "https://drive.google.com/drive/folders/1mXhD0Tsjy6kbN8fsBhjZNHs6CW0aFbVB?usp=sharing",
-  graduation: ""
-};
-document.querySelectorAll('[data-link]').forEach(a => {
-  const url = LINKS[a.dataset.link];
-  if (url) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; }
-  else { a.classList.add('off'); a.textContent = 'Link coming soon'; }
-});
-
-if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const revealItems = document.querySelectorAll('.wcard, .live, .job, .skills > div, .pcard, .list li, .grad img');
-  const revealObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  revealItems.forEach(item => {
-    item.classList.add('reveal');
-    revealObserver.observe(item);
-  });
-}
-</script>
+<footer><div class="wrap"><span>&copy; 2026 Sanka Liyanage</span><a href="#top">Back to top ↑</a></div></footer>
+<script src="scripts.js"></script>
 </body>
 </html>
