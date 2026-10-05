@@ -1,223 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Sanka Liyanage | Software Engineering undergraduate | Full-stack web development, UI/UX design, system analysis." />
-  <title>Sanka Liyanage | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanka Liyanage | Digital Marketing & Content</title>
+<meta name="description" content="Sanka Liyanage: social media content, campaign support and visual design. Based in Dubai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c1b3a; --muted:#5b5a78; --paper:#ffffff; --wash:#f1eefe;
+  --coral:#ff4f7b; --teal:#0aa59b; --sun:#ffc93c; --line:#dcd8f2;
+  --display:'Bricolage Grotesque','Trebuchet MS',Arial,sans-serif;
+  --body:'DM Sans','Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:28px}
+section{padding:72px 0}
+
+/* nav */
+header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;flex-wrap:wrap}
+.logo{font-family:var(--display);font-weight:800;font-size:1.2rem;text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;flex-wrap:wrap}
+nav ul a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding:64px 0 80px;background:var(--wash)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6.5vw,4.8rem);font-weight:800}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:34em;margin:22px 0 26px}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.badge{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.88rem;font-weight:500}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border-radius:12px;font-weight:700;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:var(--coral);border-color:var(--coral)}
+.btn.ghost:hover{background:#fff}
+
+/* profile photo */
+.photo{position:relative;aspect-ratio:4/5;width:100%;max-width:360px;margin-left:auto;border:2px solid var(--ink);border-radius:24px;box-shadow:10px 10px 0 var(--ink);background:var(--coral);overflow:hidden;display:flex;align-items:center;justify-content:center;color:#fff;font:800 4.5rem var(--display)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* work */
+.wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.wcard{border:1.5px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px;background:#fff}
+.wcard h3{font-size:1.15rem}
+.wcard p{color:var(--muted);font-size:.93rem;flex:1}
+.wlink{font-weight:700;color:var(--coral);text-decoration:underline}
+.wlink.off{color:var(--muted);text-decoration:none;font-weight:500}
+.wmain{flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;padding:26px}
+.wmain p{flex:none;max-width:36em}
+.btn.off{opacity:.6;border-color:var(--muted);background:var(--muted);color:#fff}
+.live{margin-top:24px;background:var(--wash);border-radius:16px;padding:24px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.live p{font-weight:500;max-width:34em}
+
+/* experience */
+.job{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:28px 0;border-top:1.5px solid var(--line)}
+.job:last-child{border-bottom:1.5px solid var(--line)}
+.job .when{color:var(--muted);font-weight:500;font-size:.95rem}
+.job h3{font-size:1.3rem}
+.job .org{color:var(--teal);font-weight:700;margin:2px 0 12px}
+.job ul{padding-left:20px;color:var(--muted)}
+.job li{margin-bottom:6px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.skills div{background:var(--wash);border-radius:16px;padding:22px}
+.skills h3{font-size:1.05rem;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:#fff;border-radius:8px;padding:4px 12px;font-size:.88rem;font-weight:500}
+
+/* projects & education */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.list li{list-style:none;padding:14px 0;border-top:1.5px solid var(--line)}
+.list li:last-child{border-bottom:1.5px solid var(--line)}
+.list b{font-family:var(--display);font-size:1.05rem}
+.list span{display:block;color:var(--muted);font-size:.93rem}
+
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.pcard{background:#fff;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.pcard img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;border-bottom:1.5px solid var(--line)}
+.pcard .info{padding:16px 18px 20px}
+.pcard h3{font-size:1.05rem;margin-bottom:4px}
+.pcard p{font-size:.92rem;color:var(--muted)}
+.grad img{width:100%;border-radius:16px;border:1.5px solid var(--line);display:block;margin-bottom:14px}
+
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.contact h2{color:#fff}
+.contact p{color:#cfcdee;max-width:32em;margin-bottom:24px}
+.contact .links{display:flex;gap:12px;flex-wrap:wrap}
+.contact .btn{border-color:#fff;color:#fff}
+.contact .btn.primary{background:var(--coral);border-color:var(--coral)}
+.contact .btn:hover{background:#fff;color:var(--ink)}
+footer{padding:22px 0;font-size:.88rem;color:var(--muted);text-align:center}
+
+@media(max-width:820px){
+  .hero .wrap,.two{grid-template-columns:1fr}
+  .photo{margin:0 auto}
+  .job{grid-template-columns:1fr;gap:6px}
+  section{padding:56px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
 
-  <header class="site-header" id="top">
-    <nav class="navbar container" id="navbar">
-      <a class="logo" href="#home">Sanka Liyanage</a>
-      <ul class="nav-list" id="navList">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="logo" href="#top">Sanka Liyanage</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#flyers">Flyers</a></li>
-        <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">&#9776;</button>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section id="home" class="home-section">
-      <div class="home-bg"></div>
-      <div class="container home-grid">
-        <div class="hero-left">
-          <img class="profile-circle" src="https://i.postimg.cc/8zKVLndX/Whats-App-Image-2025-11-13-at-21-21-00.jpg" alt="Sanka Liyanage" />
-          <p class="home-subtitle">Software Engineering Undergraduate · Web Developer · UI/UX Designer</p>
-          <h1>Sanka Liyanage</h1>
-          <p class="tagline">“Building clean, functional, and scalable digital solutions.”</p>
-          <div class="home-cta">
-            <a class="btn primary-btn" href="#projects">View My Work</a>
-            <a class="btn outline-btn" href="https://drive.google.com/drive/folders/197hhvTXViMfDmUh7yfS3urEEG7OcNjfA?usp=drive_link" target="_blank" rel="noopener">Download CV</a>
-            <a class="btn ghost-btn" href="#contact">Contact Me</a>
-          </div>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/shanka-liyanage-04a083312/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/Shanka214" target="_blank" rel="noopener">GitHub</a>
-            <a href="mailto:shankaliyanage214@gmail.com">Email</a>
-          </div>
-        </div>
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Content that gets a brand noticed.</h1>
+      <p class="lead">I'm a digital marketing and content creator with a software engineering degree. I create social posts, reels and campaign visuals, and I use data to see what works.</p>
+      <div class="badges">
+        <span class="badge">Based in Dubai</span>
+        <span class="badge">Available immediately</span>
       </div>
-    </section>
-
-    <section id="about" class="container section-card">
-      <h2>About Me</h2>
-      <p class="about-text">
-        I am a motivated Software Engineering undergraduate currently completing the final stage of my BEng (Hons) Software Engineering degree at London Metropolitan University.
-        I specialize in web application development, UI/UX design, and data-driven digital solutions.
-        I enjoy solving real-world problems and learning new technologies to create modern, practical, and user-friendly applications.
-      </p>
-      <h3>Education</h3>
-      <ul class="education-list">
-        <li>BEng (Hons) Software Engineering – London Metropolitan University (Ongoing, final 2 months)</li>
-        <li>BTEC HND in Software Engineering – ESOFT Metro Campus (2023–2024)</li>
-        <li>Diploma in IT (Pearson Assured) – ESOFT Metro Campus (2021–2022)</li>
-        <li>G.C.E. O/L – Dharmaraja College, Kandy</li>
-        <li>Speech & Drama / Written English Certification (UK)</li>
-      </ul>
-    </section>
-
-    <section id="skills" class="container section-card">
-      <h2>Skills</h2>
-      <div class="skill-group">
-        <h3>Programming</h3>
-        <div class="chips">Python · Java · C# · PHP</div>
+      <div class="btns">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
       </div>
-      <div class="skill-group">
-        <h3>Web Development</h3>
-        <div class="chips">HTML · CSS · JavaScript · Bootstrap · WordPress</div>
+    </div>
+    <div class="photo"><span aria-hidden="true">SL</span><img src="images/profile.jpg" alt="Sanka Liyanage" onerror="this.remove()"></div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Selected work</h2>
+    <div class="wcard wmain">
+      <div>
+        <h3>All my content in one folder</h3>
+        <p>Social media posts, reels, flyers and campaign visuals.</p>
       </div>
-      <div class="skill-group">
-        <h3>Tools & Databases</h3>
-        <div class="chips">MS SQL · GitHub · Figma</div>
-      </div>
-      <div class="skill-group">
-        <h3>Data & Visualization</h3>
-        <div class="chips">Power BI</div>
-      </div>
-      <div class="skill-group">
-        <h3>Soft Skills</h3>
-        <div class="chips">Problem-solving · Communication · Leadership · Time Management</div>
-      </div>
-    </section>
-
-    <section id="projects" class="container section-card">
-      <h2>Projects</h2>
-      <div class="card-grid">
-        <!-- 1 -->
-        <article class="project-card">
-          <img src="https://i.postimg.cc/MTTHyrFg/Screenshot-2025-10-11-021043.png" alt="StarEvents Online Event Ticketing" />
-          <h3>StarEvents Online Event Ticketing</h3>
-          <p>ASP.NET MVC platform with event management, ticket sales, QR e-tickets, and admin monitoring.</p>
-          <button class="btn outline-btn project-btn" data-project="star">View Details</button>
-        </article>
-
-        <!-- 2 -->
-        <article class="project-card">
-          <img src="https://i.postimg.cc/3NBP9HxX/image.png" alt="Nestlings Childcare Marketplace" />
-          <h3>Nestlings Childcare Marketplace</h3>
-          <p>Final Year Project childcare booking site with provider verification, parent dashboard, AI chatbot.</p>
-          <button class="btn outline-btn project-btn" data-project="nestlings">View Details</button>
-        </article>
-
-        <!-- 3 -->
-        <article class="project-card">
-          <img src="https://i.postimg.cc/Y2YD1FnH/image.png" alt="Echo Hotel Reservation System" />
-          <h3>Echo Hotel Reservation System</h3>
-          <p>PHP/MySQL booking engine with branch admin controls and pricing management.</p>
-          <button class="btn outline-btn project-btn" data-project="echo">View Details</button>
-        </article>
-
-        <!-- 4 -->
-        <article class="project-card">
-          <img src="https://i.postimg.cc/9Fq94PJ7/image.png" alt="E-Video Cloud UI" />
-          <h3>E-Video Cloud UI (Figma)</h3>
-          <p>UI/UX design for modern streaming platform with rent/own and library management.</p>
-          <button class="btn outline-btn project-btn" data-project="evideo">View Details</button>
-        </article>
-
-        <!-- 5 -->
-        <article class="project-card">
-          <img src="https://i.postimg.cc/VvwjmJPp/image.png" alt="Malcolm Photography Website" />
-          <h3>Malcolm Photography Website</h3>
-          <p>Responsive multipage portfolio with gallery, contact form, SEO, and admin backend.</p>
-          <button class="btn outline-btn project-btn" data-project="malcolm">View Details</button>
-        </article>
-
-        <!-- 6 -->
-        <article class="project-card">
-          <div class="icon-card">📁</div>
-          <h3>Grifindo Toys Payroll System</h3>
-          <p>C#, SQL Server payroll tool with report generator, allowances, and overtime workflow.</p>
-          <button class="btn outline-btn project-btn" data-project="grifindo">View Details</button>
-        </article>
-
-        <!-- 7 -->
-        <article class="project-card">
-          <img src="https://i.postimg.cc/KzMdCHm0/image.png" alt="Alliance Health LAN Design" />
-          <h3>Alliance Health LAN Network Design</h3>
-          <p>Cisco Packet Tracer LAN architecture with VLANs, routing, DHCP, DNS, security zones.</p>
-          <button class="btn outline-btn project-btn" data-project="alliance">View Details</button>
-        </article>
-      </div>
-    </section>
-
-    <section id="flyers" class="container section-card">
-      <h2>Flyers</h2>
-      <p>Promotional, social announcements, product highlights, and informational flyer designs.</p>
-      <div class="flyer-grid">
-        <a class="flyer-item" href="https://i.postimg.cc/placeholder1.png" data-lightbox>
-          <img src="https://i.postimg.cc/placeholder1.png" alt="Flyer 1" />
-        </a>
-        <a class="flyer-item" href="https://i.postimg.cc/placeholder2.png" data-lightbox>
-          <img src="https://i.postimg.cc/placeholder2.png" alt="Flyer 2" />
-        </a>
-        <a class="flyer-item" href="https://i.postimg.cc/placeholder3.png" data-lightbox>
-          <img src="https://i.postimg.cc/placeholder3.png" alt="Flyer 3" />
-        </a>
-        <a class="flyer-item" href="https://i.postimg.cc/placeholder4.png" data-lightbox>
-          <img src="https://i.postimg.cc/placeholder4.png" alt="Flyer 4" />
-        </a>
-      </div>
-      <a class="btn primary-btn" href="https://drive.google.com/drive/folders/17l54Bdf0Me_5jBTtu0izwWSbB_PDioKa?usp=drive_link" target="_blank" rel="noopener">View All Flyers</a>
-    </section>
-
-    <section id="services" class="container section-card">
-      <h2>Services</h2>
-      <div class="services-grid">
-        <article class="service-card"><h3>Web Development</h3><p>Responsive, high-performance web applications and systems.</p></article>
-        <article class="service-card"><h3>UI/UX Design</h3><p>Wireframes, prototypes, user-centered experiences.</p></article>
-        <article class="service-card"><h3>Data Visualization</h3><p>Power BI dashboard design and analytical reporting.</p></article>
-        <article class="service-card"><h3>System Analysis</h3><p>Architecture diagrams, feasibility, documentation and planning.</p></article>
-      </div>
-    </section>
-
-    <section id="contact" class="container section-card">
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <div>
-          <p>📧 <strong>Email:</strong> shankaliyanage214@gmail.com</p>
-          <p>📞 <strong>Phone:</strong> 0770151254</p>
-          <p>🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shanka-liyanage-04a083312/" target="_blank" rel="noopener">linkedin.com/in/shanka-liyanage-04a083312/</a></p>
-          <p>💻 <strong>GitHub:</strong> <a href="https://github.com/Shanka214" target="_blank" rel="noopener">github.com/Shanka214</a></p>
-        </div>
-        <form class="contact-form" action="#" method="POST">
-          <label><input type="text" placeholder="Name" required /></label>
-          <label><input type="email" placeholder="Email" required /></label>
-          <label><textarea rows="5" placeholder="Message" required></textarea></label>
-          <button class="btn primary-btn" type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© 2025 Sanka Liyanage — All Rights Reserved</p>
-  </footer>
-
-  <div id="projectModal" class="modal hidden">
-    <div class="modal-content">
-      <button class="close-modal" id="closeModal">&times;</button>
-      <div id="projectDetail"></div>
+      <a class="btn primary" href="https://drive.google.com/drive/folders/1mXhD0Tsjy6kbN8fsBhjZNHs6CW0aFbVB?usp=sharing">View my work</a>
+    </div>
+    <div class="live">
+      <p>See my latest content live on ImpactEra's LinkedIn page.</p>
+      <a class="btn primary" href="https://www.linkedin.com/company/impacteraa/posts/?feedView=all" target="_blank" rel="noopener">View ImpactEra posts</a>
     </div>
   </div>
+</section>
 
-  <div id="lightbox" class="lightbox hidden">
-    <button id="lightboxClose" class="lightbox-close">&times;</button>
-    <img id="lightboxImage" alt="Flyer preview" />
+<section id="experience" style="background:var(--wash)">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <div class="job">
+      <div class="when">Apr 2026 to Sep 2026<br>Dubai, UAE</div>
+      <div>
+        <h3>Business Development Associate & Content Creator</h3>
+        <p class="org">ImpactEra (UAE)</p>
+        <ul>
+          <li>Supported digital marketing campaigns and partner engagement to strengthen brand visibility online.</li>
+          <li>Created social media content, promotional visuals and marketing materials for campaigns and events.</li>
+          <li>Developed content strategies matched to campaign goals, target audiences and brand requirements.</li>
+          <li>Worked with internal teams and external partners to coordinate content and campaign activity.</li>
+          <li>Designed visuals for professional events, training programmes and technology-focused campaigns.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">Jun 2025 to Nov 2025</div>
+      <div>
+        <h3>Digital Content Creator Intern</h3>
+        <p class="org">ISURU Creations (Pvt) Ltd</p>
+        <ul>
+          <li>Managed the company's social media platforms.</li>
+          <li>Created posts, reels and other digital content.</li>
+          <li>Kept the company's online presence and branding consistent.</li>
+          <li>Supported content planning and audience engagement.</li>
+        </ul>
+      </div>
+    </div>
   </div>
+</section>
 
-  <script src="scripts.js"></script>
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills and tools</h2>
+    <div class="skills">
+      <div><h3>Marketing</h3><div class="chips"><span>Social media management</span><span>Social media strategy</span><span>Campaign coordination</span><span>SEO basics</span><span>Email marketing (Brevo)</span><span>Community engagement</span></div></div>
+      <div><h3>Content and design</h3><div class="chips"><span>Canva</span><span>Figma</span><span>CapCut</span><span>Copywriting</span><span>Brand communication</span><span>Visual content</span></div></div>
+      <div><h3>Data</h3><div class="chips"><span>Power BI</span><span>Excel</span><span>SQL</span><span>Performance analysis</span></div></div>
+      <div><h3>Technical</h3><div class="chips"><span>HTML / CSS / JavaScript</span><span>Python</span><span>PHP</span><span>C#</span><span>Java</span><span>Git and GitHub</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" style="background:var(--wash)">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <div class="pgrid">
+      <article class="pcard"><div class="info"><h3>E-Video Cloud UI (Figma)</h3><p>UI/UX design for a modern streaming platform with rent/own and library management.</p></div></article>
+      <article class="pcard"><div class="info"><h3>Malcolm Photography Website</h3><p>Responsive multipage portfolio with gallery, contact form, SEO and admin backend.</p></div></article>
+      <article class="pcard"><div class="info"><h3>Alliance Health LAN Network Design</h3><p>Cisco Packet Tracer LAN with VLANs, routing, DHCP, DNS and security zones.</p></div></article>
+      <article class="pcard"><div class="info"><h3>Soft Skills Workshop</h3><p>Planned and ran a training session for 50+ students at ESOFT Metro Campus.</p></div></article>
+      <article class="pcard"><div class="info"><h3>StarEvents Ticketing System</h3><p>Event booking platform with secure payments, QR tickets and analytics.</p></div></article>
+      <article class="pcard"><div class="info"><h3>Nestlings Marketplace</h3><p>Final-year childcare booking platform with dashboards, reviews and an AI chatbot.</p></div></article>
+      <article class="pcard"><div class="info"><h3>Big Data Research</h3><p>Operational efficiency analysis for SITREK Group.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap two">
+    <div>
+      <h2>Education</h2>
+      <ul class="list">
+        <li><b>BEng in Software Engineering</b><span>London Metropolitan University. First class.</span></li>
+        <li><b>Pearson BTEC HND in Software Engineering</b><span>13 Distinctions and 2 Merits.</span></li>
+        <li><b>Pearson Assured Diploma in IT</b><span>ESOFT Metro Campus. Overall Distinction.</span></li>
+        <li><b>Speech & Drama and Written English (UK)</b><span>Honours, Society of Teachers of Speech and Drama.</span></li>
+      </ul>
+    </div>
+    <div class="grad">
+      <h2>Graduation</h2>
+      <img src="images/graduation.jpg" alt="Sanka Liyanage at graduation" onerror="this.remove()">
+      <a class="wlink" href="https://drive.google.com/drive/folders/1BD_4m0cqZxn7JOGkI81FeZ1eP2nTuW1w?usp=sharing">View more graduation photos</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Let's work together</h2>
+    <p>I'm in Dubai and ready to start now. Send me a message or connect on LinkedIn.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:shankaliyanage214@gmail.com">shankaliyanage214@gmail.com</a>
+      <a class="btn" href="https://wa.me/971541608232" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" href="tel:+971541608232">+971 54 160 8232</a>
+      <a class="btn" href="https://www.linkedin.com/in/shanka214/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/Shanka214" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>&copy; 2026 Sanka Liyanage</footer>
+
+<script>
+/* Paste your cloud links between the quotes. Empty ones show "Link coming soon". */
+const LINKS = {
+  work: "https://drive.google.com/drive/folders/1mXhD0Tsjy6kbN8fsBhjZNHs6CW0aFbVB?usp=sharing",
+  graduation: ""
+};
+document.querySelectorAll('[data-link]').forEach(a => {
+  const url = LINKS[a.dataset.link];
+  if (url) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; }
+  else { a.classList.add('off'); a.textContent = 'Link coming soon'; }
+});
+</script>
 </body>
 </html>
