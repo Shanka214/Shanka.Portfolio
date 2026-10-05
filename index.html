@@ -48,7 +48,19 @@ nav ul a:hover{color:var(--ink)}
 
 /* profile photo */
 .photo{position:relative;aspect-ratio:4/5;width:100%;max-width:360px;margin-left:auto;border:2px solid var(--ink);border-radius:24px;box-shadow:10px 10px 0 var(--ink);background:var(--coral);overflow:hidden;display:flex;align-items:center;justify-content:center;color:#fff;font:800 4.5rem var(--display)}
-.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 12%}
+
+@keyframes rise-in{
+  from{opacity:0;transform:translateY(22px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.hero h1{animation:rise-in .7s both}
+.hero p.lead{animation:rise-in .7s .12s both}
+.hero .badges{animation:rise-in .7s .22s both}
+.hero .btns{animation:rise-in .7s .32s both}
+.photo{animation:rise-in .8s .18s both}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
 
 /* work */
 .wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
@@ -110,7 +122,11 @@ footer{padding:22px 0;font-size:.88rem;color:var(--muted);text-align:center}
   .job{grid-template-columns:1fr;gap:6px}
   section{padding:56px 0}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
@@ -273,6 +289,23 @@ document.querySelectorAll('[data-link]').forEach(a => {
   if (url) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; }
   else { a.classList.add('off'); a.textContent = 'Link coming soon'; }
 });
+
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const revealItems = document.querySelectorAll('.wcard, .live, .job, .skills > div, .pcard, .list li, .grad img');
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealItems.forEach(item => {
+    item.classList.add('reveal');
+    revealObserver.observe(item);
+  });
+}
 </script>
 </body>
 </html>
